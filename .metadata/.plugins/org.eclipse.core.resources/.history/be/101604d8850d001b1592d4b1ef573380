@@ -1,0 +1,68 @@
+package com.groupby;
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class GroupBy {
+
+	
+	class Item {
+
+		private String name;
+		private int qty;
+		private BigDecimal price;
+
+		public Item() {
+
+		}
+
+		public Item(String name, int qty, BigDecimal price) {
+			super();
+			this.name = name;
+			this.qty = qty;
+			this.price = price;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public int getQty() {
+			return qty;
+		}
+
+		public void setQty(int qty) {
+			this.qty = qty;
+		}
+
+		public BigDecimal getPrice() {
+			return price;
+		}
+
+		public void setPrice(BigDecimal price) {
+			this.price = price;
+		}
+
+	}
+	
+	
+	public static void main(String[] args) {
+
+		List<String> items = Arrays.asList("apple", "apple", "banana", "apple", "orange", "banana", "papaya");
+
+		Map<String, List<String>> collect = items.stream().collect(Collectors.groupingBy(Function.identity()));
+
+		System.out.println(collect);
+	}
+
+}
+
+// {papaya=[papaya], orange=[orange], banana=[banana, banana], apple=[apple, apple, apple]}

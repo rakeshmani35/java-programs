@@ -1,0 +1,11 @@
+package com.singleton;
+
+public class SerializedSingleton {
+
+	private static final SerializedSingleton instance = new SerializedSingleton();
+	
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.thread.communication;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Random;
+
+// https://javarevisited.blogspot.com/2015/06/java-lock-and-condition-example-producer-consumer.html#axzz7K1DKvLjM
+
+class SharedResource {
+	// producer consumer problem data 
+	private static final int CAPACITY = 10; 
+	private final Queue queue = new LinkedList<>(); 
+	private final Random theRandom = new Random();
+
+	
+}
+
+public class ProducerConsumerSolutionUsingLock {
+
+	public static void main(String[] args) {
+
+	}
+
+}

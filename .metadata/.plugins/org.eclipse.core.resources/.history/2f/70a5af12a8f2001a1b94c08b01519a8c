@@ -1,0 +1,8 @@
+package com.stream;
+
+public class FlatMapTest {
+
+	public static void main(String[] args) {
+
+	}
+}

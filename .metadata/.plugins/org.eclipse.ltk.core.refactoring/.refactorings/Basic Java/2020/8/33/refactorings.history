@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.memoryLeak.UseEmployeeGC&apos; to &apos;UseEmployeeWithoutGC&apos;&#x0D;&#x0A;- Original project: &apos;Basic Java&apos;&#x0D;&#x0A;- Original element: &apos;com.memoryLeak.UseEmployeeGC&apos;&#x0D;&#x0A;- Renamed element: &apos;com.memoryLeak.UseEmployeeWithoutGC&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UseEmployeeGC&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.memoryLeak{UseEmployeeGC.java[UseEmployeeGC" matchStrategy="1" name="UseEmployeeWithoutGC" qualified="false" references="true" similarDeclarations="false" stamp="1597491877004" textual="false" version="1.0"/>
+</session>

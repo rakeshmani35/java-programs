@@ -1,0 +1,30 @@
+package com.forkjoin;
+
+import java.util.concurrent.ForkJoinPool;
+
+// https://howtodoinjava.com/java7/forkjoin-framework-tutorial-forkjoinpool-example/
+// program that will search for files with a determined extension inside a folder and its subfolders. 
+class FolderProcess {
+
+	//This attribute will store the full path of the folder this task is going to process.
+	private final String path;
+	
+	 //This attribute will store the name of the extension of the files this task is going to look for.
+	private final String extension;
+
+	public FolderProcess(String path, String extension) {
+		this.path = path;
+		this.extension = extension;
+	}
+}
+
+public class SearchFileInFolder {
+
+	public static void main(String[] args) {
+
+		// create ForkJoinPool using default constructor
+		ForkJoinPool pool = new ForkJoinPool();
+
+	}
+
+}

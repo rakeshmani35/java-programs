@@ -1,0 +1,124 @@
+package com.collect.collectors;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+// https://mkyong.com/java8/java-8-convert-map-to-list/
+public class ConvertMapToList {
+
+	// before java8
+	public static void mapKeytoList(Map<Integer, String> map) {
+
+		List<Integer> result = new ArrayList<Integer>(map.keySet());
+
+		System.out.println("before java8 convert map keys to list : " + result);
+	}
+
+	// before java8
+	public static void mapValuetoList(Map<Integer, String> map) {
+
+		List<String> result = new ArrayList<String>(map.values());
+
+		System.out.println("before java8 convert map values to list : " + result);
+	}
+
+	// java8 - stream, List of key
+	public static void mapKeystoList_Java8(Map<Integer, String> map) {
+
+		List<Integer> result = map.keySet().stream().collect(Collectors.toList());
+
+		System.out.println("java8 -  convert map keys to list : " + result);
+	}
+
+	// java8 - stream, List of value
+	public static void mapValuetoList_Java8(Map<Integer, String> map) {
+
+		List<String> result = map.values().stream().collect(Collectors.toList());
+
+		System.out.println(" java8 convert map values to list : " + result);
+	}
+
+	// java8 - stream. List of key,value
+	public static void maptoList_Java8(Map<Integer, String> map) {
+
+		List<Entry<Integer, String>> result = map.entrySet().stream().collect(Collectors.toList());
+
+		System.out.println(" java8 convert map keys and values to list : " + result);
+		//  [50=dragonfruit, 20=orange, 40=watermelon, 10=apple, 30=banana]
+	}
+
+	// java8 - stream
+	public static void maptoList_SortByKey(Map<Integer, String> map) {
+
+		// java.lang.ClassCastException: class java.util.HashMap$Node cannot be cast to
+		// class java.lang.Comparable
+		// List<Entry<Integer, String>> sortedList = map.entrySet().stream().sorted().collect(Collectors.toList());
+
+		List<Entry<Integer, String>> sortedList = map.entrySet().stream().sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.toList());
+		
+		// Collectors.mapping can not apply on primitive 
+		List<String> collect = map.entrySet().stream().sorted(Map.Entry.comparingByKey())
+				.collect(Collectors.mapping(Map.Entry::getValue, Collectors.toList()))
+				.stream()
+				.sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+
+		System.out.println("maptoList_SortByKey-1 : " + sortedList);
+        System.out.println("maptoList_SortByKey-2----"+collect);
+		//[10=apple, 20=orange, 30=banana, 40=watermelon, 50=dragonfruit]
+        
+       
+	}
+	
+	
+	// java8 - stream
+		public static void maptoList_SortByValue(Map<Integer, String> map) {
+
+			// java.lang.ClassCastException: class java.util.HashMap$Node cannot be cast to
+			// class java.lang.Comparable
+			// List<Entry<Integer, String>> sortedList = map.entrySet().stream().sorted().collect(Collectors.toList());
+
+			List<Entry<Integer, String>> sortedList = map.entrySet().stream().sorted(Map.Entry.comparingByValue())
+					.collect(Collectors.toList());
+
+			System.out.println("maptoList_SortByValue : " + sortedList);
+		}
+
+	public static void main(String[] args) {
+
+		Map<Integer, String> map = new HashMap<>();
+		map.put(10, "apple");
+		map.put(20, "orange");
+		map.put(30, "banana");
+		map.put(40, "watermelon");
+		map.put(50, "dragonfruit");
+
+		// before java8
+		mapKeytoList(map); // [50, 20, 40, 10, 30]
+		mapValuetoList(map); // [dragonfruit, orange, watermelon, apple, banana]
+
+		System.out.println();
+
+		// java8
+		mapKeystoList_Java8(map); // [50, 20, 40, 10, 30]
+		mapValuetoList_Java8(map); // [dragonfruit, orange, watermelon, apple, banana]
+
+		System.out.println();
+		maptoList_Java8(map); // [50=dragonfruit, 20=orange, 40=watermelon, 10=apple, 30=banana]
+
+		System.out.println();
+		maptoList_SortByKey(map); // [10=apple, 20=orange, 30=banana, 40=watermelon, 50=dragonfruit]
+
+		System.out.println();
+		maptoList_SortByValue(map);  // [10=apple, 30=banana, 50=dragonfruit, 20=orange, 40=watermelon]
+		
+		
+	}
+
+}

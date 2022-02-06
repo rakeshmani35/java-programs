@@ -1,0 +1,14 @@
+package com.forkjoin;
+
+public class JavaForkJoinPoolisTerminatingExample1 {
+
+	public static void main(String[] args) {
+
+		int availableProcessors = Runtime.getRuntime().availableProcessors();
+		
+		System.out.println("numbers of core available in your processor:" + availableProcessors);
+		
+
+	}
+
+}

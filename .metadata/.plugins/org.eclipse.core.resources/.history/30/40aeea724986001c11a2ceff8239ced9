@@ -1,0 +1,57 @@
+package com.lock;
+
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+class ReadThreadClass implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class WriteThreadClass implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class ReentrantRWDemo {
+
+	private final Map<String, String> map = new TreeMap<String, String>();
+	private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+	private final ReentrantReadWriteLock.ReadLock readLock = lock.readLock();
+	private final ReentrantReadWriteLock.WriteLock writeLock = lock.writeLock();
+
+	public String readResource(String key) {
+		System.out.println("In get method waiting to acquire lock " + Thread.currentThread().getName());
+		readLock.lock();
+		System.out.println("In get method acquired read lock " + Thread.currentThread().getName());
+		try {
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return map.get(key);
+		} finally {
+			readLock.unlock();
+			System.out.println("In get method released read lock " + Thread.currentThread().getName());
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

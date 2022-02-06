@@ -1,0 +1,13 @@
+package com.sort;
+
+// https://stackoverflow.com/questions/35866240/how-to-sort-string-array-by-length-using-arrays-sort
+// https://www.techiedelight.com/sort-array-of-strings-java/
+// https://www.geeksforgeeks.org/sort-array-strings-according-string-lengths/
+public class SortStringByLength {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

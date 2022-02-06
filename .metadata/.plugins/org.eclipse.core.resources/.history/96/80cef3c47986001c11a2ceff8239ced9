@@ -1,0 +1,15 @@
+package com.thread.communication;
+
+// https://javarevisited.blogspot.com/2015/06/java-lock-and-condition-example-producer-consumer.html#axzz7K1DKvLjM
+
+class SharedResource {
+	
+}
+
+public class ProducerConsumerSolutionUsingLock {
+
+	public static void main(String[] args) {
+
+	}
+
+}

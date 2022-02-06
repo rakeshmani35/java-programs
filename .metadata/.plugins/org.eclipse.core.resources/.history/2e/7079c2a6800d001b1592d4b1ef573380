@@ -1,0 +1,11 @@
+package com.groupby;
+
+// https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/
+public class GroupByAndCountOnListOfObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;map&apos; from expression &apos;flatMap.map(s -&gt; String.valueOf(s))&apos;&#x0D;&#x0A;- Original project: &apos;java8&apos;&#x0D;&#x0A;- Variable name: &apos;map&apos;&#x0D;&#x0A;- Destination method: &apos;com.stream.FlatMapTest.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;flatMap.map(s -&gt; String.valueOf(s))&apos;" description="Extract local variable &apos;map&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.stream{FlatMapTest.java" name="map" replace="false" selection="1173 35" stamp="1641620084627" varType="false" version="1.0"/>
+</session>

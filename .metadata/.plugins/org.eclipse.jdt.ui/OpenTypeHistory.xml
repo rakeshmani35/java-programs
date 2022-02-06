@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.lang(Enum.class[Enum" modifiers="1057" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.concurrent(ForkJoinPool.class[ForkJoinPool" modifiers="33" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.concurrent(ScheduledThreadPoolExecutor.class[ScheduledThreadPoolExecutor" modifiers="33" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.concurrent(ThreadFactory.class[ThreadFactory" modifiers="1537" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.concurrent(Executors.class[Executors" modifiers="33" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.concurrent(ExecutorService.class[ExecutorService" modifiers="1537" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.stream(Stream.class[Stream" modifiers="1537" timestamp="1579452372731"/>
+<typeInfo handle="=Basic Java/C:\/Program Files\/Java\/jdk-13.0.2\/lib\/jrt-fs.jar`java.base&lt;java.util.stream(Collector.class[Collector" modifiers="1537" timestamp="1579452372731"/>
+</typeInfoHistroy>

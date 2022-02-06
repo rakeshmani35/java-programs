@@ -1,0 +1,19 @@
+package com.sort;
+
+// https://stackoverflow.com/questions/35866240/how-to-sort-string-array-by-length-using-arrays-sort
+// https://www.techiedelight.com/sort-array-of-strings-java/
+// https://www.geeksforgeeks.org/sort-array-strings-according-string-lengths/
+// http://www.java2s.com/Tutorials/Java/Stream_How_to/Stream_Sort/Sort_String_Stream_by_length.htm
+public class SortStringByLength {
+
+	
+	public static void main(String[] args) {
+	
+		String str = "this is kooks are as a book";
+		
+		// ------------------Sort String By Length using Map ------------
+		
+
+	}
+
+}

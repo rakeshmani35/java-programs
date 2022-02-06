@@ -1,0 +1,38 @@
+package com.lock;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+class ReadThread implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class ReadWrteLockExample {
+
+	private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+	private final Lock writeLock = readWriteLock.writeLock();
+	private final Lock readLock = readWriteLock.readLock();
+	private final List list = new ArrayList<>();
+
+	private static void readResource() {
+
+	}
+
+	private static void writeResource() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

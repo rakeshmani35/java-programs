@@ -1,0 +1,20 @@
+package com.lock;
+
+class ReadThreadClass implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class ReentrantRWDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

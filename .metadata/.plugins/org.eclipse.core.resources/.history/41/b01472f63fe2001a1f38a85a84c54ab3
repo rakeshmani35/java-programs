@@ -1,0 +1,15 @@
+package com.forkjoin;
+
+// https://howtodoinjava.com/java7/forkjoin-framework-tutorial-forkjoinpool-example/
+class FolderProcess{
+	
+}
+
+public class SearchFileInFolder {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

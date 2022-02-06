@@ -1,0 +1,18 @@
+package com.forkjoin;
+
+import java.util.concurrent.ForkJoinPool;
+
+public class JavaForkJoinPoolisTerminatingExample1 {
+
+	public static void main(String[] args) {
+
+		int availableProcessors = Runtime.getRuntime().availableProcessors();
+		System.out.println("numbers of core available in your processor:" + availableProcessors);
+		
+		int[] n = {20 , 23 , 5 ,6 ,7,8,23,12,56,1}; 
+		
+		ForkJoinPool pool = new ForkJoinPool(availableProcessors);
+		
+	}
+
+}

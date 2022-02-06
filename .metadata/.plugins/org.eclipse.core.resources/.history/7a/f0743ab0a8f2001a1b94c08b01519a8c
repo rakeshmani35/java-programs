@@ -1,0 +1,21 @@
+package com.stream;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+public class FlatMapTest {
+
+	public static void main(String[] args) {
+
+		
+		 String[][] data = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}};
+		 
+		 Stream<String[]> stream = Arrays.stream(data);
+		 
+		 System.out.println("use Arrays.stream(m) : ");
+		 stream.flatMap(m -> Arrays.stream(m)).filter(x -> x.equals("a")).forEach(System.out::print);
+		 
+		 System.out.println("use  Stream.of(m) : ");
+		 stream.flatMap(m -> Stream.of(m)).filter(x -> x.equals("a")).forEach(System.out::print);;
+	}
+}
